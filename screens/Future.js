@@ -12,9 +12,7 @@ import { verbsFutureQestion } from "../components/verbsFutureQestion";
 import { verbsFutureStatement } from "../components/verbsFutureStatement";
 import { verbsFutureDenial } from "../components/verbsFutureDenial";
 
-
 export default function Future(props) {
-
   const [textQuestion, setTextQuestion] = useState();
   const [textStatement, setTextStatement] = useState();
   const [textDenial, setTextDenial] = useState();
@@ -57,7 +55,6 @@ export default function Future(props) {
       return setColorDenial("red");
     }
   }
-  
 
   return (
     <View style={styles.container}>
@@ -88,7 +85,7 @@ export default function Future(props) {
             <Button
               title={"reset"}
               color={"#FF7F50"}
-              onPress={() => textRes(87)}
+              onPress={() => textRes()}
             />
           </View>
         </View>
@@ -107,14 +104,20 @@ export default function Future(props) {
             fontSize={18}
             placeholder="введите утверждение"
           />
-          <Pressable
-            style={styles.button}
-            onPress={() => loadVerb2(textStatement)}
-          >
-            <Text style={styles.textButton}>{title}</Text>
-          </Pressable>
+          <View style={{ flexDirection: "row" }}>
+            <Pressable
+              style={styles.button}
+              onPress={() => loadVerb2(textStatement)}
+            >
+              <Text style={styles.textButton}>{title}</Text>
+            </Pressable>
+            <Button
+              title={"reset"}
+              color={"#FF7F50"}
+              onPress={() => textRes()}
+            />
+          </View>
         </View>
-
         <Text style={styles.textStile}>Denial</Text>
         <View style={styles.viewStyle}>
           <TextInput
@@ -130,12 +133,19 @@ export default function Future(props) {
             fontSize={18}
             placeholder="введите отрицание"
           />
-          <Pressable
-            style={styles.button}
-            onPress={() => loadVerb3(textDenial)}
-          >
-            <Text style={styles.textButton}>{title}</Text>
-          </Pressable>
+          <View style={{ flexDirection: "row" }}>
+            <Pressable
+              style={styles.button}
+              onPress={() => loadVerb3(textDenial)}
+            >
+              <Text style={styles.textButton}>{title}</Text>
+            </Pressable>
+            <Button
+              title={"reset"}
+              color={"#FF7F50"}
+              onPress={() => textRes()}
+            />
+          </View>
         </View>
       </ScrollView>
     </View>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, StyleSheet, Button, ScrollView } from "react-native";
+import { View, Text, TextInput, StyleSheet, Button, ScrollView, Pressable } from "react-native";
 import { Verbs } from "../components/Verbs";
 import { verbsPresentStatement } from "../components/verbsPresentStatement";
 import { verbsPresentQestion } from '../components/verbsPresentQuestion';
@@ -7,7 +7,7 @@ import { verbsPresentDenial } from "../components/verbsPresentDenial";
 
 
 //console.log(verbsPresentQestion);
-export default function Present() {
+export default function Present(props) {
   const [textQuestion, setTextQuestion] = useState();
   const [textStatement, setTextStatement] = useState();
   const [textDenial, setTextDenial] = useState();
@@ -15,9 +15,8 @@ export default function Present() {
   const [colorStatement, setColorStatement] = useState("blue");
   const [colorDenial, setColorDenial] = useState("blue");
 
-  // const nameVerb = Verbs.map((value) => {
-  //   return value.verb;
-  // });
+  const { onPress, title = "сheck answer" } = props;
+
   const onChange = (text) => {
     setTextQuestion(text);
   };
@@ -55,45 +54,94 @@ export default function Present() {
   return (
     <View style={styles.container}>
       <ScrollView>
-      <Text style={styles.textStile}>Question</Text>
-      <View style={styles.viewStyle}>
-        <TextInput
-          style={{ borderColor: colorQuestion, borderWidth: 5, paddingLeft:15,fontWeight: 'bold', height: 50, marginBottom: 10 }}
-          onChangeText={onChange}
-          placeholder="введите вопрос"
-        />
-        <Button
-          title="check answer"
-          color="#1E90FF"
-          onPress={() => loadVerb(textQuestion)}
-        />
-      </View>
-      <Text style={styles.textStile}>Statement</Text>
-      <View style={styles.viewStyle}>
-        <TextInput
-          style={{ borderColor: colorStatement, borderWidth: 5, paddingLeft:15,fontWeight: 'bold', height: 50, marginBottom: 10 }}
-          onChangeText={onChange2}
-          placeholder="введите утверждение"
-        />
-        <Button
-          title="check answer"
-          color="#1E90FF"
-          onPress={() => loadVerb2(textStatement)}
-        />
-      </View>
-      <Text style={styles.textStile}>Denial</Text>
-      <View style={styles.viewStyle}>
-        <TextInput
-          style={{ borderColor: colorDenial, borderWidth: 5, paddingLeft:15,fontWeight: 'bold', height: 50, marginBottom: 10 }}
-          onChangeText={onChange3}
-          placeholder="введите отрицание"
-        />
-        <Button
-          title="сheck answer"
-          color="#1E90FF"
-          onPress={() => loadVerb3(textDenial)}
-        />
-      </View>
+        <Text style={styles.textStile}>Question</Text>
+        <View style={styles.viewStyle}>
+          <TextInput
+            style={{
+              borderColor: colorQuestion,
+              borderWidth: 7,
+              paddingLeft: 15,
+              fontWeight: "bold",
+              height: 50,
+              marginBottom: 5,
+            }}
+            onChangeText={onChange}
+            fontSize={18}
+            marginHorizontal={5}
+            placeholder="введите вопрос"
+          />
+          <View style={{ flexDirection: "row" }}>
+            <Pressable
+              style={styles.button}
+              onPress={() => loadVerb(textQuestion)}
+            >
+              <Text style={styles.textButton}>{title}</Text>
+            </Pressable>
+            <Button
+              title={"reset"}
+              color={"#FF7F50"}
+              onPress={() => textRes()}
+            />
+          </View>
+        </View>
+        <Text style={styles.textStile}>Statement</Text>
+        <View style={styles.viewStyle}>
+          <TextInput
+            style={{
+              borderColor: colorStatement,
+              borderWidth: 7,
+              paddingLeft: 15,
+              fontWeight: "bold",
+              height: 50,
+              marginBottom: 5,
+            }}
+            onChangeText={onChange2}
+            fontSize={18}
+            placeholder="введите утверждение"
+          />
+          <View style={{ flexDirection: "row" }}>
+            <Pressable
+              style={styles.button}
+              onPress={() => loadVerb2(textStatement)}
+            >
+              <Text style={styles.textButton}>{title}</Text>
+            </Pressable>
+            <Button
+              title={"reset"}
+              color={"#FF7F50"}
+              onPress={() => textRes()}
+            />
+          </View>
+        </View>
+        <Text style={styles.textStile}>Denial</Text>
+        <View style={styles.viewStyle}>
+          <TextInput
+            style={{
+              borderColor: colorDenial,
+              borderWidth: 7,
+              paddingLeft: 15,
+              fontWeight: "bold",
+              height: 50,
+              marginBottom: 5,
+            }}
+            onChangeText={onChange3}
+            fontSize={18}
+            placeholder="введите отрицание"
+          />
+          <View style={{ flexDirection: "row" }}>
+            <Pressable
+              style={styles.button}
+              onPress={() => loadVerb3(textDenial)}
+            >
+              <Text style={styles.textButton}>{title}</Text>
+            </Pressable>
+            <Button
+              title={"reset"}
+              color={"#FF7F50"}
+              onPress={() => textRes()}
+            />
+          </View>
+        </View>
       </ScrollView>
     </View>
   );
@@ -105,7 +153,7 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
   viewStyle: {
-    margin: 5
+    margin: 5,
   },
   input: {
     height: 50,
@@ -117,7 +165,25 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   textStile: {
-    marginLeft: '35%',
-    fontWeight: 'bold'
-  }
+    marginLeft: "35%",
+    fontWeight: "bold",
+  },
+  button: {
+    alignItems: "center",
+    justifyContent: "center",
+    height: 40,
+    width: 200,
+    marginLeft: 5,
+    borderRadius: 4,
+    elevation: 3,
+    backgroundColor: "#1E90FF",
+    marginRight: 25,
+  },
+  textButton: {
+    fontSize: 16,
+    lineHeight: 21,
+    fontWeight: "bold",
+    letterSpacing: 0.25,
+    color: "white",
+  },
 });
