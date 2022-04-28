@@ -1,6 +1,7 @@
 export const verbsFutureDenial = [
     "I will not am",
     "I will not do",
+    "I will not be",
     "I will not feel",
     "I will not see",
     "I will not hear",
@@ -119,6 +120,7 @@ export const verbsFutureDenial = [
     "I will not hesitate",
   
     "You will not are",
+    "You will not be",
     "You will not do",
     "You will not feel",
     "You will not see",
@@ -238,6 +240,7 @@ export const verbsFutureDenial = [
     "You will not hesitate",
   
     "We will not are",
+    "We will not be",
     "We will not do",
     "We will not feel",
     "We will not see",
@@ -357,6 +360,7 @@ export const verbsFutureDenial = [
     "We will not hesitate",
   
     "They will not are",
+    "They will not be",
     "They will not do",
     "They will not feel",
     "They will not see",
@@ -476,6 +480,7 @@ export const verbsFutureDenial = [
     "They will not hesitate",
   
     "He will not are",
+    "He will not be",
     "He will not do",
     "He will not feel",
     "He will not see",
@@ -595,6 +600,7 @@ export const verbsFutureDenial = [
     "He will not hesitate",
   
     "She will not are",
+    "She will not be",
     "She will not do",
     "She will not feel",
     "She will not see",
@@ -714,6 +720,7 @@ export const verbsFutureDenial = [
     "She will not hesitate",
   
     "It will not are",
+    "It will not be",
     "It will not do",
     "It will not feel",
     "It will not see",

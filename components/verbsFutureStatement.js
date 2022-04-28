@@ -1,5 +1,5 @@
 export const verbsFutureStatement = [
-    "I will am",
+    "I will be",
     "I will do",
     "I will feel",
     "I will see",
@@ -118,7 +118,7 @@ export const verbsFutureStatement = [
     "I will answer",
     "I will hesitate",
   
-    "You will are",
+    "You will be",
     "You will do",
     "You will feel",
     "You will see",
@@ -237,7 +237,7 @@ export const verbsFutureStatement = [
     "You will answer",
     "You will hesitate",
   
-    "We will are",
+    "We will be",
     "We will do",
     "We will feel",
     "We will see",
@@ -356,7 +356,7 @@ export const verbsFutureStatement = [
     "We will answer",
     "We will hesitate",
   
-    "They will are",
+    "They will be",
     "They will do",
     "They will feel",
     "They will see",
@@ -475,7 +475,7 @@ export const verbsFutureStatement = [
     "They will answer",
     "They will hesitate",
   
-    "He will are",
+    "He will be",
     "He will do",
     "He will feel",
     "He will see",
@@ -594,7 +594,7 @@ export const verbsFutureStatement = [
     "He will answer",
     "He will hesitate",
   
-    "She will are",
+    "She will be",
     "She will do",
     "She will feel",
     "She will see",
@@ -713,7 +713,7 @@ export const verbsFutureStatement = [
     "She will answer",
     "She will hesitate",
   
-    "It will are",
+    "It will be",
     "It will do",
     "It will feel",
     "It will see",

@@ -1,5 +1,5 @@
 export const verbsPresentQestion = [
-  "Do i am",
+  "Am i",
   "Do i do",
   "Do i feel",
   "Do i see",
@@ -118,7 +118,7 @@ export const verbsPresentQestion = [
   "Do i answer",
   "Do i hesitate",
 
-  "Do you are",
+  "Are you",
   "Do you do",
   "Do you feel",
   "Do you see",
@@ -237,7 +237,7 @@ export const verbsPresentQestion = [
   "Do you answer",
   "Do you hesitate",
 
-  "Do we are",
+  "Are we",
   "Do we do",
   "Do we feel",
   "Do we see",
@@ -356,7 +356,7 @@ export const verbsPresentQestion = [
   "Do we answer",
   "Do we hesitate",
 
-  "Do they are",
+  "Are they",
   "Do they do",
   "Do they feel",
   "Do they see",
@@ -475,7 +475,7 @@ export const verbsPresentQestion = [
   "Do they answer",
   "Do they hesitate",
 
-  "Does he are",
+  "Is he",
   "Does he do",
   "Does he feel",
   "Does he see",
@@ -594,7 +594,7 @@ export const verbsPresentQestion = [
   "Does he answer",
   "Does he hesitate",
 
-  "Does she are",
+  "Is she",
   "Does she do",
   "Does she feel",
   "Does she see",
@@ -713,7 +713,7 @@ export const verbsPresentQestion = [
   "Does she answer",
   "Does she hesitate",
 
-  "You are",
+  "Is it",
   "Does it do",
   "Does it feel",
   "Does it see",

@@ -1,5 +1,5 @@
 export const verbsPastQestion = [
-    "Did i am",
+    "Was i",
     "Did i do",
     "Did i feel",
     "Did i see",
@@ -118,7 +118,7 @@ export const verbsPastQestion = [
     "Did i answer",
     "Did i hesitate",
   
-    "Did you are",
+    "Were you",
     "Did you do",
     "Did you feel",
     "Did you see",
@@ -237,7 +237,7 @@ export const verbsPastQestion = [
     "Did you answer",
     "Did you hesitate",
   
-    "Did we are",
+    "Were we",
     "Did we do",
     "Did we feel",
     "Did we see",
@@ -356,7 +356,7 @@ export const verbsPastQestion = [
     "Did we answer",
     "Did we hesitate",
   
-    "Did they are",
+    "Were they",
     "Did they do",
     "Did they feel",
     "Did they see",
@@ -475,7 +475,7 @@ export const verbsPastQestion = [
     "Did they answer",
     "Did they hesitate",
   
-    "Did he are",
+    "Was he",
     "Did he do",
     "Did he feel",
     "Did he see",
@@ -594,7 +594,7 @@ export const verbsPastQestion = [
     "Did he answer",
     "Did he hesitate",
   
-    "Did she are",
+    "Was she",
     "Did she do",
     "Did she feel",
     "Did she see",
@@ -713,7 +713,7 @@ export const verbsPastQestion = [
     "Did she answer",
     "Did she hesitate",
   
-    "You are",
+    "Was it",
     "Did it do",
     "Did it feel",
     "Did it see",

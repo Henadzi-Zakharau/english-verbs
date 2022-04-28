@@ -1,5 +1,6 @@
 export const verbsFutureQestion = [
     "Will i am",
+    "Will i be",
     "Will i do",
     "Will i feel",
     "Will i see",
@@ -119,6 +120,7 @@ export const verbsFutureQestion = [
     "Will i hesitate",
   
     "Will you are",
+    "Will you be",
     "Will you do",
     "Will you feel",
     "Will you see",
@@ -238,6 +240,7 @@ export const verbsFutureQestion = [
     "Will you hesitate",
   
     "Will we are",
+    "Will we be",
     "Will we do",
     "Will we feel",
     "Will we see",
@@ -357,6 +360,7 @@ export const verbsFutureQestion = [
     "Will we hesitate",
   
     "Will they are",
+    "Will they be",
     "Will they do",
     "Will they feel",
     "Will they see",
@@ -476,6 +480,7 @@ export const verbsFutureQestion = [
     "Will they hesitate",
   
     "Will he are",
+    "Will he be",
     "Will he do",
     "Will he feel",
     "Will he see",
@@ -595,6 +600,7 @@ export const verbsFutureQestion = [
     "Will he hesitate",
   
     "Will she are",
+    "Will she be",
     "Will she do",
     "Will she feel",
     "Will she see",
@@ -714,6 +720,7 @@ export const verbsFutureQestion = [
     "Will she hesitate",
   
     "You are",
+    "Will it be",
     "Will it do",
     "Will it feel",
     "Will it see",

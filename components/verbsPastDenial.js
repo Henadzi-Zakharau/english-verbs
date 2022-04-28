@@ -1,5 +1,6 @@
 export const verbsPastDenial = [
-    "I didn't am",
+    "I was not",
+    "I wasn't",
     "I didn't do",
     "I didn't feel",
     "I didn't see",
@@ -118,7 +119,8 @@ export const verbsPastDenial = [
     "I didn't answer",
     "I didn't hesitate",
   
-    "You didn't are",
+    "You were not",
+    "You weren't",
     "You didn't do",
     "You didn't feel",
     "You didn't see",
@@ -237,7 +239,8 @@ export const verbsPastDenial = [
     "You didn't answer",
     "You didn't hesitate",
   
-    "We didn't are",
+    "We were not",
+    "We weren't",
     "We didn't do",
     "We didn't feel",
     "We didn't see",
@@ -356,7 +359,8 @@ export const verbsPastDenial = [
     "We didn't answer",
     "We didn't hesitate",
   
-    "They didn't are",
+    "They were not",
+    "They weren't",
     "They didn't do",
     "They didn't feel",
     "They didn't see",
@@ -475,7 +479,8 @@ export const verbsPastDenial = [
     "They didn't answer",
     "They didn't hesitate",
   
-    "He didn't are",
+    "He was not",
+    "He wasn't",
     "He didn't do",
     "He didn't feel",
     "He didn't see",
@@ -594,7 +599,8 @@ export const verbsPastDenial = [
     "He didn't answer",
     "He didn't hesitate",
   
-    "She didn't are",
+    "She was not",
+    "She wasn't",
     "She didn't do",
     "She didn't feel",
     "She didn't see",
@@ -713,7 +719,8 @@ export const verbsPastDenial = [
     "She didn't answer",
     "She didn't hesitate",
   
-    "It didn't are",
+    "It wos not",
+    "It wosn't",
     "It didn't do",
     "It didn't feel",
     "It didn't see",

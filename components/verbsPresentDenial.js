@@ -1,5 +1,5 @@
 export const verbsPresentDenial = [
-    "I don't am",
+    "I am not",
     "I don't do",
     "I don't feel",
     "I don't see",
@@ -118,7 +118,7 @@ export const verbsPresentDenial = [
     "I don't answer",
     "I don't hesitate",
   
-    "You don't are",
+    "You are not",
     "You don't do",
     "You don't feel",
     "You don't see",
@@ -238,7 +238,7 @@ export const verbsPresentDenial = [
     "You don't answer",
     "You don't hesitate",
   
-    "We don't are",
+    "We are not",
     "We don't do",
     "We don't feel",
     "We don't see",
@@ -357,7 +357,7 @@ export const verbsPresentDenial = [
     "We don't answer",
     "We don't hesitate",
   
-    "They don't are",
+    "They are not",
     "They don't do",
     "They don't feel",
     "They don't see",
@@ -476,7 +476,7 @@ export const verbsPresentDenial = [
     "They don't answer",
     "They don't hesitate",
 
-    "He doesn't are",
+    "He wos not",
     "He doesn't do",
     "He doesn't feel",
     "He doesn't see",
@@ -595,7 +595,7 @@ export const verbsPresentDenial = [
     "He doesn't answer",
     "He doesn't hesitate",
 
-    "She doesn't are",
+    "She wos not",
     "She doesn't do",
     "She doesn't feel",
     "She doesn't see",
@@ -714,7 +714,7 @@ export const verbsPresentDenial = [
     "She doesn't answer",
     "She doesn't hesitate",
 
-    "It doesn't are",
+    "It wos not",
     "It doesn't do",
     "It doesn't feel",
     "It doesn't see",

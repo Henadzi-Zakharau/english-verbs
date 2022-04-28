@@ -119,7 +119,7 @@ export const verbsPastStatement = [
         "I answered",
         "I hesitated",
 
-        "You was",
+        "You were",
         "You did",
         "You felt",
         "You saw",
@@ -239,7 +239,7 @@ export const verbsPastStatement = [
         "You answered",
         "You hesitated",
 
-        "We was",
+        "We were",
         "We did",
         "We felt",
         "We saw",
@@ -359,7 +359,7 @@ export const verbsPastStatement = [
         "We answered",
         "We hesitated",
 
-        "They was",
+        "They were",
         "They did",
         "They felt",
         "They saw",
