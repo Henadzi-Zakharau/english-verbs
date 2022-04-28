@@ -80,7 +80,7 @@ export default function Present(props) {
             <Button
               title={"reset"}
               color={"#FF7F50"}
-              onPress={() => textRes()}
+              onPress={() => textRes('55')}
             />
           </View>
         </View>

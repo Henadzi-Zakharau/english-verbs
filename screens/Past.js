@@ -6,7 +6,7 @@ import {
   StyleSheet,
   Button,
   ScrollView,
-  Pressable
+  Pressable,
 } from "react-native";
 import { Verbs } from "../components/Verbs";
 import { verbsPastStatement } from "../components/verbsPastStatement";
@@ -17,17 +17,17 @@ export default function Past(props) {
   const [textQuestion, setTextQuestion] = useState();
   const [textStatement, setTextStatement] = useState();
   const [textDenial, setTextDenial] = useState();
-  const [colorQuestion, setColorQuestion] = useState("blue");
-  const [colorStatement, setColorStatement] = useState("blue");
-  const [colorDenial, setColorDenial] = useState("blue");
-
-  const { onPress, title = "сheck answer" } = props;
+  const [colorQuestion, setColorQuestion] = useState("#1E90FF");
+  const [colorStatement, setColorStatement] = useState("#1E90FF");
+  const [colorDenial, setColorDenial] = useState("#1E90FF");
+  
+const { onPress, title = "сheck answer" } = props;
 
   const dictions = Verbs.map((elem) => {
     return elem + ";" + "\n";
   });
 
-  //console.log()
+  
 
   const onChange = (text) => {
     setTextQuestion(text);
@@ -40,13 +40,16 @@ export default function Past(props) {
   };
 
   function loadVerb(el) {
+    console.log(el)
     if (verbsPastQestion.includes(el) === true) {
       return setColorQuestion("green");
+    // } else if( el === null ) {
+    //   return setColorQuestion("#1E90FF");
     } else {
       return setColorQuestion("red");
     }
   }
-
+console.log()
   function loadVerb2(el) {
     if (verbsPastStatement.includes(el) === true) {
       return setColorStatement("green");
@@ -92,7 +95,7 @@ export default function Past(props) {
             <Button
               title={"reset"}
               color={"#FF7F50"}
-              onPress={() => textRes()}
+              // onPress={() => loadVerb(null)}
             />
           </View>
         </View>

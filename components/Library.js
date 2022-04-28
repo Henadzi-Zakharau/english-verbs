@@ -1,12 +1,25 @@
 import React from 'react';
-import { Text, View, StyleSheet, Pressable } from 'react-native';
+import { Text, View, StyleSheet, Pressable, TextInput } from 'react-native';
 
 export default function Library(props) {
   const { onPress, title = 'Save' } = props;
   return (
-    <Pressable style={styles.button} onPress={onPress}>
-      <Text style={styles.text}>{title}</Text>
-    </Pressable>
+    <View>
+      <TextInput
+            style={{
+              borderColor: 'red',
+              borderWidth: 7,
+              paddingLeft: 15,
+              fontWeight: "bold",
+              height: 50,
+              marginBottom: 5,
+            }}
+            
+            fontSize={18}
+            marginHorizontal={5}
+            placeholder="введите вопрос"
+          />
+    </View>
   );
 }
 
