@@ -14,42 +14,29 @@ import { verbsPastQestion } from "../components/verbsPastQuestion";
 import { verbsPastDenial } from "../components/verbsPastDenial";
 
 export default function Past(props) {
-  const [textQuestion, setTextQuestion] = useState();
-  const [textStatement, setTextStatement] = useState();
-  const [textDenial, setTextDenial] = useState();
+  const [textQuestion, setTextQuestion] = useState("");
+  const [textStatement, setTextStatement] = useState("");
+  const [textDenial, setTextDenial] = useState("");
   const [colorQuestion, setColorQuestion] = useState("#1E90FF");
   const [colorStatement, setColorStatement] = useState("#1E90FF");
   const [colorDenial, setColorDenial] = useState("#1E90FF");
-  
-const { onPress, title = "сheck answer" } = props;
+
+  const { onPress, title = "сheck answer", mode } = props;
 
   const dictions = Verbs.map((elem) => {
     return elem + ";" + "\n";
   });
 
-  
-
-  const onChange = (text) => {
-    setTextQuestion(text);
-  };
-  const onChange2 = (text) => {
-    setTextStatement(text);
-  };
-  const onChange3 = (text) => {
-    setTextDenial(text);
-  };
-
   function loadVerb(el) {
-    console.log(el)
-    if (verbsPastQestion.includes(el) === true) {
+  if (verbsPastQestion.includes(el) === true) {
       return setColorQuestion("green");
-    // } else if( el === null ) {
-    //   return setColorQuestion("#1E90FF");
+    } else if (el == "") {
+      return setColorQuestion("#1E90FF");
     } else {
       return setColorQuestion("red");
     }
   }
-console.log()
+
   function loadVerb2(el) {
     if (verbsPastStatement.includes(el) === true) {
       return setColorStatement("green");
@@ -80,7 +67,8 @@ console.log()
               height: 50,
               marginBottom: 5,
             }}
-            onChangeText={onChange}
+            value={textQuestion}
+            onChangeText={(value) => setTextQuestion(value)}
             fontSize={18}
             marginHorizontal={5}
             placeholder="введите вопрос"
@@ -95,7 +83,7 @@ console.log()
             <Button
               title={"reset"}
               color={"#FF7F50"}
-              // onPress={() => loadVerb(null)}
+              onPress={() => setTextQuestion("")}
             />
           </View>
         </View>
@@ -110,7 +98,8 @@ console.log()
               height: 50,
               marginBottom: 5,
             }}
-            onChangeText={onChange2}
+            value={textStatement}
+            onChangeText={(value) => setTextStatement(value)}
             fontSize={18}
             placeholder="введите утверждение"
           />
@@ -124,7 +113,7 @@ console.log()
             <Button
               title={"reset"}
               color={"#FF7F50"}
-              onPress={() => textRes()}
+              onPress={() => setTextStatement("")}
             />
           </View>
         </View>
@@ -139,7 +128,8 @@ console.log()
               height: 50,
               marginBottom: 5,
             }}
-            onChangeText={onChange3}
+            value={textDenial}
+            onChangeText={(value) => setTextDenial(value)}
             fontSize={18}
             placeholder="введите отрицание"
           />
@@ -153,7 +143,7 @@ console.log()
             <Button
               title={"reset"}
               color={"#FF7F50"}
-              onPress={() => textRes()}
+              onPress={() => setTextDenial("")}
             />
           </View>
         </View>
@@ -202,3 +192,17 @@ const styles = StyleSheet.create({
     color: "white",
   },
 });
+
+// const [value, setValue] = useState('')
+
+//   const handleClear = (e: any) =>  {
+//     e.preventDefault()
+//     setValue('')
+//   }
+//   const handleChange = (e: any) => setValue(e.target.value)
+
+//   return <form>
+//     <input value={value} onChange={handleChange}/>
+//     <button onClick={handleClear}>send</button>
+//   </form>
+// }

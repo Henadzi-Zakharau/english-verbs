@@ -22,16 +22,6 @@ export default function Future(props) {
 
   const { onPress, title = "сheck answer" } = props;
 
-  const onChange = (text) => {
-    setTextQuestion(text);
-  };
-  const onChange2 = (text) => {
-    setTextStatement(text);
-  };
-  const onChange3 = (text) => {
-    setTextDenial(text);
-  };
-
   function loadVerb(el) {
     if (verbsFutureQestion.includes(el) === true) {
       return setColorQuestion("green");
@@ -70,7 +60,8 @@ export default function Future(props) {
               height: 50,
               marginBottom: 5,
             }}
-            onChangeText={onChange}
+            value={textQuestion}
+            onChangeText={(value) => setTextQuestion(value)}
             fontSize={18}
             marginHorizontal={5}
             placeholder="введите вопрос"
@@ -85,7 +76,7 @@ export default function Future(props) {
             <Button
               title={"reset"}
               color={"#FF7F50"}
-              onPress={() => textRes()}
+              onPress={() => setTextQuestion("")}
             />
           </View>
         </View>
@@ -100,7 +91,8 @@ export default function Future(props) {
               height: 50,
               marginBottom: 5,
             }}
-            onChangeText={onChange2}
+            value={textStatement}
+            onChangeText={(value) => setTextStatement(value)}
             fontSize={18}
             placeholder="введите утверждение"
           />
@@ -114,7 +106,7 @@ export default function Future(props) {
             <Button
               title={"reset"}
               color={"#FF7F50"}
-              onPress={() => textRes()}
+              onPress={() => setTextStatement("")}
             />
           </View>
         </View>
@@ -129,7 +121,8 @@ export default function Future(props) {
               height: 50,
               marginBottom: 5,
             }}
-            onChangeText={onChange3}
+            value={textDenial}
+            onChangeText={(value) => setTextDenial(value)}
             fontSize={18}
             placeholder="введите отрицание"
           />
@@ -143,7 +136,7 @@ export default function Future(props) {
             <Button
               title={"reset"}
               color={"#FF7F50"}
-              onPress={() => textRes()}
+              onPress={() => setTextDenial("")}
             />
           </View>
         </View>

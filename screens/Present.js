@@ -1,31 +1,27 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, StyleSheet, Button, ScrollView, Pressable } from "react-native";
-import { Verbs } from "../components/Verbs";
+import {
+  View,
+  Text,
+  TextInput,
+  StyleSheet,
+  Button,
+  ScrollView,
+  Pressable,
+} from "react-native";
 import { verbsPresentStatement } from "../components/verbsPresentStatement";
-import { verbsPresentQestion } from '../components/verbsPresentQuestion';
+import { verbsPresentQestion } from "../components/verbsPresentQuestion";
 import { verbsPresentDenial } from "../components/verbsPresentDenial";
-
 
 //console.log(verbsPresentQestion);
 export default function Present(props) {
   const [textQuestion, setTextQuestion] = useState();
   const [textStatement, setTextStatement] = useState();
   const [textDenial, setTextDenial] = useState();
-  const [colorQuestion, setColorQuestion] = useState("blue");
-  const [colorStatement, setColorStatement] = useState("blue");
-  const [colorDenial, setColorDenial] = useState("blue");
+  const [colorQuestion, setColorQuestion] = useState("#1E90FF");
+  const [colorStatement, setColorStatement] = useState("#1E90FF");
+  const [colorDenial, setColorDenial] = useState("#1E90FF");
 
   const { onPress, title = "сheck answer" } = props;
-
-  const onChange = (text) => {
-    setTextQuestion(text);
-  };
-  const onChange2 = (text) => {
-    setTextStatement(text);
-  };
-  const onChange3 = (text) => {
-    setTextDenial(text);
-  };
 
   function loadVerb(el) {
     if (verbsPresentQestion.includes(el) === true) {
@@ -65,7 +61,8 @@ export default function Present(props) {
               height: 50,
               marginBottom: 5,
             }}
-            onChangeText={onChange}
+            value={textQuestion}
+            onChangeText={(value) => setTextQuestion(value)}
             fontSize={18}
             marginHorizontal={5}
             placeholder="введите вопрос"
@@ -80,7 +77,7 @@ export default function Present(props) {
             <Button
               title={"reset"}
               color={"#FF7F50"}
-              onPress={() => textRes('55')}
+              onPress={() => setTextQuestion("")}
             />
           </View>
         </View>
@@ -95,7 +92,8 @@ export default function Present(props) {
               height: 50,
               marginBottom: 5,
             }}
-            onChangeText={onChange2}
+            value={textStatement}
+            onChangeText={(value) => setTextStatement(value)}
             fontSize={18}
             placeholder="введите утверждение"
           />
@@ -109,7 +107,7 @@ export default function Present(props) {
             <Button
               title={"reset"}
               color={"#FF7F50"}
-              onPress={() => textRes()}
+              onPress={() => setTextStatement("")}
             />
           </View>
         </View>
@@ -124,7 +122,8 @@ export default function Present(props) {
               height: 50,
               marginBottom: 5,
             }}
-            onChangeText={onChange3}
+            value={textDenial}
+            onChangeText={(value) => setTextDenial(value)}
             fontSize={18}
             placeholder="введите отрицание"
           />
@@ -138,7 +137,7 @@ export default function Present(props) {
             <Button
               title={"reset"}
               color={"#FF7F50"}
-              onPress={() => textRes()}
+              onPress={() => setTextDenial("")}
             />
           </View>
         </View>
