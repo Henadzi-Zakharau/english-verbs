@@ -8,7 +8,6 @@ import {
   ScrollView,
   Pressable,
 } from "react-native";
-import { Verbs } from "../components/Verbs";
 import { verbsPastStatement } from "../components/verbsPastStatement";
 import { verbsPastQestion } from "../components/verbsPastQuestion";
 import { verbsPastDenial } from "../components/verbsPastDenial";
@@ -23,14 +22,10 @@ export default function Past(props) {
 
   const { onPress, title = "сheck answer", mode } = props;
 
-  const dictions = Verbs.map((elem) => {
-    return elem + ";" + "\n";
-  });
-
   function loadVerb(el) {
-  if (verbsPastQestion.includes(el) === true) {
+    if (verbsPastQestion.includes(el) === true) {
       return setColorQuestion("green");
-    } else if (el == "") {
+    } else if (el == null) {
       return setColorQuestion("#1E90FF");
     } else {
       return setColorQuestion("red");
@@ -40,6 +35,8 @@ export default function Past(props) {
   function loadVerb2(el) {
     if (verbsPastStatement.includes(el) === true) {
       return setColorStatement("green");
+    } else if (el == null) {
+      return setColorStatement("#1E90FF");
     } else {
       return setColorStatement("red");
     }
@@ -48,6 +45,8 @@ export default function Past(props) {
   function loadVerb3(el) {
     if (verbsPastDenial.includes(el) === true) {
       return setColorDenial("green");
+    } else if (el == null) {
+      return setColorDenial("#1E90FF");
     } else {
       return setColorDenial("red");
     }
@@ -83,7 +82,7 @@ export default function Past(props) {
             <Button
               title={"reset"}
               color={"#FF7F50"}
-              onPress={() => setTextQuestion("")}
+              onPress={() => (setTextQuestion(""), loadVerb(null))}
             />
           </View>
         </View>
@@ -113,7 +112,7 @@ export default function Past(props) {
             <Button
               title={"reset"}
               color={"#FF7F50"}
-              onPress={() => setTextStatement("")}
+              onPress={() => (setTextStatement(""), loadVerb2(null))}
             />
           </View>
         </View>
@@ -143,7 +142,7 @@ export default function Past(props) {
             <Button
               title={"reset"}
               color={"#FF7F50"}
-              onPress={() => setTextDenial("")}
+              onPress={() => (setTextDenial(""), loadVerb3(null))}
             />
           </View>
         </View>
@@ -192,17 +191,3 @@ const styles = StyleSheet.create({
     color: "white",
   },
 });
-
-// const [value, setValue] = useState('')
-
-//   const handleClear = (e: any) =>  {
-//     e.preventDefault()
-//     setValue('')
-//   }
-//   const handleChange = (e: any) => setValue(e.target.value)
-
-//   return <form>
-//     <input value={value} onChange={handleChange}/>
-//     <button onClick={handleClear}>send</button>
-//   </form>
-// }

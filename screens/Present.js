@@ -12,7 +12,6 @@ import { verbsPresentStatement } from "../components/verbsPresentStatement";
 import { verbsPresentQestion } from "../components/verbsPresentQuestion";
 import { verbsPresentDenial } from "../components/verbsPresentDenial";
 
-//console.log(verbsPresentQestion);
 export default function Present(props) {
   const [textQuestion, setTextQuestion] = useState();
   const [textStatement, setTextStatement] = useState();
@@ -26,6 +25,8 @@ export default function Present(props) {
   function loadVerb(el) {
     if (verbsPresentQestion.includes(el) === true) {
       return setColorQuestion("green");
+    } else if (el == null) {
+      return setColorQuestion("#1E90FF");
     } else {
       return setColorQuestion("red");
     }
@@ -34,6 +35,8 @@ export default function Present(props) {
   function loadVerb2(el) {
     if (verbsPresentStatement.includes(el) === true) {
       return setColorStatement("green");
+    } else if (el == null) {
+      return setColorStatement("#1E90FF");
     } else {
       return setColorStatement("red");
     }
@@ -42,6 +45,8 @@ export default function Present(props) {
   function loadVerb3(el) {
     if (verbsPresentDenial.includes(el) === true) {
       return setColorDenial("green");
+    } else if (el == null) {
+      return setColorDenial("#1E90FF");
     } else {
       return setColorDenial("red");
     }
@@ -77,7 +82,7 @@ export default function Present(props) {
             <Button
               title={"reset"}
               color={"#FF7F50"}
-              onPress={() => setTextQuestion("")}
+              onPress={() => (setTextQuestion(""), loadVerb(null))}
             />
           </View>
         </View>
@@ -107,7 +112,7 @@ export default function Present(props) {
             <Button
               title={"reset"}
               color={"#FF7F50"}
-              onPress={() => setTextStatement("")}
+              onPress={() => (setTextStatement(""), loadVerb2(null))}
             />
           </View>
         </View>
@@ -137,7 +142,7 @@ export default function Present(props) {
             <Button
               title={"reset"}
               color={"#FF7F50"}
-              onPress={() => setTextDenial("")}
+              onPress={() => (setTextDenial(""), loadVerb3(null))}
             />
           </View>
         </View>
